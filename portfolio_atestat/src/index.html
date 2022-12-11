@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +14,9 @@
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="./script.js" type="text/babel"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- cursor <div class="inner-cursor"></div>
@@ -35,255 +40,136 @@
         </script>
     </div>
     <!-- header -->
-    <header>
-        <div class="nav-bar">
-            <a href="#" class="logo">cristi</a>
-            <div class="navigation">
-                <div class="nav-items">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#services">Services</a>
-                    <a href="#contact">Contact</a>                    
-                </div>
-            </div>
+    <div class="wrapper">
+        <nav data-toggled="false" data-transitionable="false">
+        <div id="nav-logo-section" class="nav-section">
+            <a href="#home">
+                <img src="./Logo1.svg" alt="logo">
+            </a>
         </div>
-    </header>
+        <div id="nav-mobile-section">
 
-    <!-- home section -->
-    <section class="home flex-center" id="home">
-        <div class="home-container">
-            <div class="media-icons">
-                <a href="https://www.facebook.com/daniel.cristian.77964201/" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/cristian_daniel_mcd/" target="_blank">
-                    <i class="fab fa-instagram"></i>
+            <div id="nav-link-section" class="nav-section">
+                <a href="#about">ABOUT</a>
+                <a href="#work">WORK</a>
+            </div>
+            <div id="nav-social-section" class="nav-section">
+                <a href="#contact">
+                    <i class="fa-regular fa-address-book"></i>     
                 </a>
                 <a href="#">
-                    <i class="fab fa-discord"></i>
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
                 </a>
             </div>
+            <div id="nav-resume-section" class="nav-section">
+                <a href="#">RESUME</a>
+            </div>
+        </div>
+        <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
+            <span>Menu</span>
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+    </div>
+        
+
+    
+    <div class="container">
+
+    <!-- home section -->
+    <section class="home" id="home">
+        <div class="home-container">
             <div class="info">
-                <h2>yo, im cristi</h2>
-                <h3>web dev enthusiast</h3>
-                <p>currently a student who learns and practices web.</p>
-                <a href="" class="btn">contact me <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-            <div class="home-img">
-                <img src="/imgs/cristi.png">
-            </div>
-        </div>
-        <a href="about" class="scroll-down">scroll down <i class="fas fa-arrow-circle-down"></i></a>
-    </section>
-
-    <!-- about section -->
-    <section class="about section" id="about">
-        <div class="container flex-center">
-            <h1 class="section-title-01">About Me</h1>
-            <h2 class="section-title-02">About Me</h2>
-            <div class="content flex-center">
-                <div class="about-img">
-                    <img src="/imgs/cristi2.png">
-                </div>
-                <div class="about-info">
-                    <div class="description">
-                        <h3>Hello there!</h3>
-                        <h4> I am a creative <span>front-end developer</span> based in <span>Romania.</span></h4>
-                        <p>I design and develop services for customers specializing creating stylish, modern websites, web services and online
-                        stores. My passion is to design digital user experiences through meaningful interactions. Check out my Portfolio.</p>
-                    </div>
-                    <ul class="professional-list">
-                        <li class="list-item">
-                            <h3>5+</h3>
-                            <span>yrs of <br>experience</span>
-                        </li>
-                        <li class="list-item">
-                            <h3>5+</h3>
-                            <span>yrs of <br>experience</span>
-                        </li>
-                        <li class="list-item">
-                            <h3>5+</h3>
-                            <span>yrs of <br>experience</span>
-                        </li>
-                    </ul>
-                    <a href="" class="btn">download cv <i class="fas fa-download"></i></a>
+                <p>Hello there👋,</p>
+                <h1>I am Cristi!</h1>
+                <h1>
+                    I don't browse websites. I
+                    <span class="magic">
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-text">create </span>
+                    </span>
+                    them.
+                </h1>
+                <h2>I'm a full-time student, and ocassionallty a Web Developer.</h2>
+                <h2>Currently, I am open for any collaboration!</h2>
+                </h2>
+                <div class="buttons">
+                    <a href="#" class="btn btn-2">Get in touch</a>
                 </div>
             </div>
         </div>
     </section>
+        <section class="about" id="about">    
 
-    <!-- skills section -->
-    <section class="skills section" id="skills">
-        <div class="container flex-center">
-            <h1 class="section-title-01">Skills</h1>
-            <h2 class="section-title-02">Skills</h2>
-            <div class="content">
-                <div class="skills-description">
-                    <h3>Education & Skills</h3>
-                    <p>For more than 5 years our experts have been accomplishing enough with modern Web Development, new generation web and app
-                    programming language.</p>
-                </div>
-                <div class="skills-info education-all">
-                    <div class="education">
-                        <h4><label>Education</label></h4>
-                        <ul class="edu-list"></ul>
-                        <li class="item">
-                            <span class="year">2019-2023</span>
-                            <p><span>High-school diploma</span> - Computer Science, National Collage " Nicolae Balcescu "</p>
-                        </li>
-                        <li class="item">
-                            <span class="year">2023-2026</span>
-                            <p><span>University student</span> - Computer Science, University of Bucharest </p>
-                        </li>
-                        <li class="item">
-                            <span class="year">2023-2024</span>
-                            <p><span>UI/UX course diploma</span> - designcourse.com </p>
-                        </li>
-                    </div>
+            <h1>About me</h1>
+            <!--<img src="./cristi.png">-->
+            <div class="info-about">
+                <p>
+                    Hello! My name is Cristi and I enjoy learning and building web things.
+                    My passion for programming started back in 2019, my first year of hight-school. 
+                    I started with C++ for data structures and algorithms.
+                    Then i discovered the power of Web Development, and how many awesome
+                    things can be built with it.
+                </p>
+                <br>
+                <p>
+                    Fast-forward today, I'm still learning by building this website and other projects for my portfolio.
+                    My main focus these days is to have a solid knowlege of HTML, CSS and JS,
+                    and then to learn some frameorks.
+                </p>            
+
+                    <p>
+                        There are a few technologies I've been working with recently:
+                <div class="gridlanguages">
+                        <ul>
+                            <li>
+                                C++
+                            </li>
+                            <li>
+                                HTML
+                            </li>
+                            <li>
+                                CSS
+                            </li>
+                            <li>
+                                JS
+                            </li>
+                        </ul>
+                    </p>
                 </div>
             </div>
+        <div class="img">
+            <img src="./cristi.png
+" alt="">
         </div>
-    </section>
-    <!--qualifications-->
-    <section class="qualification section">
-        <div class="container flex-center">
-            <
-                <h1 class="section-title-01">Qualification</h1>
-                <h2 class="section-title-02">Qualification</h2>
+        </section>
+        <section class="work" id="work">
 
-            <div class="qualification-container container">
-                <div class="qualification-tabs">
-                    <div class="qualification-button button--flex">
-                        <i class="uil uil-graduation-cap qualification-icon"></i>
-                        Education
-                    </div>
-                    <div class="qualification-button button--flex">
-                        <i class="uil uil-brackets-curly qualification-icon"></i>
-                        Work Experience
-                    </div>
-                </div>
-            </div>
-
-            <!--qualification content 1-->
-
-            <div class="qualification-sections">
-
-                <!--!!!-->
-
-                <div class="qualification-content">
-                    <!--qualification 1-->
-                    <div class="qualification-data">
-                        <div>
-                            <h3 class="qualification-title">Computer Science high-school diploma</h3>
-                            <span class="qualification-subtitle"> National Collage " Nicolae Balcescu "</span>
-                            <div class="qualification-calendar">
-                                <i class="uil uil-calendar-alt"></i>2019 - 2023
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="qualification-rounder"></div>
-                        <div class="qualification-line"></div>
-                    </div>
-                
-
-                <!--!!!-->
-
-                
-                    <!--qualification 2-->
-                    <div class="qualification-data">
-                        <div>
-                            <h3 class="qualification-title">studying Bachelor in Computer Science</h3>
-                            <span class="qualification-subtitle"> University of Bucharest</span>
-                            <div class="qualification-calendar">
-                                <i class="uil uil-calendar-alt"></i>2023 - 2026
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="qualification-rounder"></div>
-                        <div class="qualification-line"></div>
-                    </div>
-                
-
-                <!--!!!-->
-
-                
-                    <!--qualification 3-->
-                    <div class="qualification-data">
-                        <div>
-                            <h3 class="qualification-title">studying Master in Software engeneering</h3>
-                            <span class="qualification-subtitle"> University of Bucharest</span>
-                            <div class="qualification-calendar">
-                                <i class="uil uil-calendar-alt"></i>2026 - 2028
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="qualification-rounder"></div>
-                        <div class="qualification-line"></div>
-                    </div>
-                </div>
-
-                <!--qualification content 1-->
-
-                <div class="qualification-content">
-                    <!--qualification 1-->
-                    <div class="qualification-data">
-                        <div>
-                            <h3 class="qualification-title">Frontend developer</h3>
-                            <span class="qualification-subtitle">nobody has hired me without prev work exp :|</span>
-                            <div class="qualification-calendar">
-                                <i class="uil uil-calendar-alt"></i>2019 - 2023
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="qualification-rounder"></div>
-                        <div class="qualification-line"></div>
-                    </div>
-                
-                
-                    <!--!!!-->
-                
-                
-                    <!--qualification 2-->
-                    <div class="qualification-data">
-                        <div>
-                            <h3 class="qualification-title">full stack web developer</h3>
-                            <span class="qualification-subtitle"> undeva</span>
-                            <div class="qualification-calendar">
-                                <i class="uil uil-calendar-alt"></i>2023 - 2026
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="qualification-rounder"></div>
-                        <div class="qualification-line"></div>
-                    </div>
-                
-                
-                    <!--!!!-->
-                
-                
-                    <!--qualification 3-->
-                    <div class="qualification-data">
-                        <div>
-                            <h3 class="qualification-title">soft engeneer</h3>
-                            <span class="qualification-subtitle">garrykfkfhkhf</span>
-                            <div class="qualification-calendar">
-                                <i class="uil uil-calendar-alt"></i>2026 - 2028
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="qualification-rounder"></div>
-                        <div class="qualification-line"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    </body> 
+        </section>
+        <section class="contact" id="contact">
+            <h1>contact</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio natus officiis fugit vero vel voluptate quas distinctio a veniam veritatis, dicta omnis rerum quam illum optio quis dolorem repudiandae quod.</p>
+        </section>
+    </div>
+</body> 
 </html>
